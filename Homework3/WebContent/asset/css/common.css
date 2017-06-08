@@ -1,0 +1,514 @@
+@charset "utf-8";
+@import url(font.css);
+
+/* [S] reset */
+body {
+	overflow-x:hidden;
+	background: #f0f0f0;
+}
+* {
+	margin: 0px;
+	padding: 0px;
+}
+img {
+	border: 0;
+	vertical-align: middle;
+}
+li {list-style: none}
+a {text-decoration: none}
+a, html, button, input, textarea {
+	color: #2d2825;
+	font-family: 'Nanum Gothic', dotum;
+	font-size: 14px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+iframe {border: 0;}
+a:hover {text-decoration: underline;}
+em {font-style: normal;}
+button, label, input[type="submit"], input[type="image"], input[type="button"] {
+	border: 0;
+	cursor: pointer
+}
+input[type="checkbox"],
+input[type="radio"] {vertical-align: middle}
+.hidden {display: none;}
+/* [E] reset */
+
+/* [S] header */
+header {
+	position: relative;
+	width: 100%;
+	height: 155px;
+	background-color: #ff5c3c;
+	text-align: center;
+}
+header .logoutArea {
+	width: 1000px;
+	margin: -55px auto 0;
+	text-align: right;
+}
+header h1 {
+	position: relative;
+	width: 1100px;
+	margin: 0 auto;
+}
+header h1 a {
+	position: absolute;
+	top: 48px;
+	left: 10px;
+}
+header h1 a:hover,
+nav a:hover {text-decoration: none}
+nav {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #4c4743;
+}
+nav button {
+	width: 58px;
+	height: 50px;
+	background: url("../img/menu.png") center center no-repeat #2d2825;
+	text-indent: -999em;
+	font-size: 1px;
+}
+nav > ul {
+	position: relative;
+	width: 1100px;
+	margin: 0 auto;
+	text-align: left;
+}
+nav > ul:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+nav > ul > li {
+	float: left;
+}
+nav > ul > li a {
+	display: inline-block;
+	height: 50px;
+	padding: 0 20px;
+	line-height: 50px;
+	font-size: 15px;
+	color: #fff;
+}
+nav > ul > li.on a {
+	color: #4c4743;
+	border-bottom: 1px solid #777;
+}
+header form {
+	position: relative;
+	width: 565px;
+	margin: 0 auto;
+}
+header input[type="text"] {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 493px;
+	height: 25px;
+	padding: 10px 60px 10px 10px;
+	font-size: 17px;
+	border: 1px solid #e83b19;
+}
+header input[type="submit"] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 55px;
+	height: 47px;
+	background: url("../img/search.png") center center no-repeat #e83b19;
+	text-indent: -999em;
+	font-size: 1px;
+}
+footer {
+	width: 100%;
+	padding: 50px 0;
+	background: #4c4743;
+	color: #c7bfb4;
+}
+footer > p {
+	width: auto;
+	height: auto;
+	text-align: center;
+}
+footer, 
+footer a {font-size: 13px;}
+.global {
+	width: 1100px;
+	height: 35px;
+	padding-top: 5px;
+	margin: 0 auto;
+	text-align: right;
+}
+.global li {
+	display: inline;
+	padding: 0 10px;
+}
+.global a {
+	color: #fff;
+	font-size: 12px;
+}
+
+/*로그인*/
+#loginArea {
+	background: #f1f1f1;
+}
+#loginArea header {
+	height: 5px;
+	padding: 0;
+	background: #ff5c3c;
+	border: 0;
+}
+#loginArea h1 {display: none;}
+#loginArea h2 {
+	padding: 20px;
+	margin-bottom: 30px;
+	background: #4c4743;
+	color: #fff;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	text-align: center;
+	font-size: 12px;
+}
+#loginArea section {
+	width: 430px;
+	margin: 100px auto 0;
+	border-radius: 3px;
+	background: #fff;
+}
+#loginArea section > article > div {
+	padding: 10px 80px;
+	width: 280px;
+	height: 200px;
+}
+#loginArea p {
+	text-align: center;
+	margin-bottom: 10px;
+}
+#loginArea input[type="text"], 
+#loginArea input[type="password"] {
+	width: calc(100% - 40px);
+	height: 35px;
+	padding: 0 5px;
+	padding-left: 35px;
+	margin-bottom: 5px;
+	border: 0;
+	line-height: 35px;
+}
+#loginArea input[type="text"] {
+	background: url("../img/user.png") #f2f2f2 no-repeat 8px center;
+}
+#loginArea input[type="password"] {
+	background: url("../img/key.png") #f2f2f2 no-repeat 10px center;
+}
+.colorBtn, 
+#loginArea input[type="submit"] {
+	width: 100%;
+	height: 35px;
+	background: #ff5c3c;
+	border: 1px solid #fa4b28;
+	border-radius: 2px;
+	color: #fff;
+	line-height: 35px;
+}
+#loginArea footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 30px 0;
+	background: #fff
+}
+.colorBtn {
+	height: 45px;
+	line-height: 45px;
+}
+
+/*학생홈*/
+section article {
+	position: relative;
+	margin: 0 auto;
+}
+#mainVis > div {
+	position: relative;
+	width: 100%;
+	height: 345px;
+	margin: 0 auto;
+}
+#mainVis ul {
+	/*width: 330px;*/
+	height: 210px;
+}
+#mainVis ul div {
+	width: 330px;
+	height: 227px;
+}
+#mainVis .haeruPrev, 
+#mainVis .haeruNext {
+	position: absolute;
+	top: 35%;
+	width: 40px;
+	height: 50px;
+	text-indent: -999em;
+	font-size: 1px;
+}
+#banner .haeruPrev,
+#mainVis .haeruPrev {
+	background: url("../img/arrowleft_b.png") center center no-repeat;
+	left: 30px;
+} 
+#banner .haeruNext,
+#mainVis .haeruNext {
+	background: url("../img/arrowright_b.png") center center no-repeat;
+	right: 30px;
+} 
+
+section > div:after {
+	clear: both;
+	display: block;
+	content: "";
+}
+section > div {
+	width: 1100px;
+	margin: 20px auto;
+}
+section h2 span {
+	color: #ff5c3c;
+}
+#todayBook {float: left;}
+#todayBook > div {
+	width: 590px;
+	height: 280px;
+	padding: 30px;
+	margin-top: 5px;
+	background: #fff;
+	border: 1px solid #ddd;
+}
+
+#todayBook > div > span {
+	display: block;
+	float: left;
+	overflow: hidden;
+	width: 190px;
+	height: 280px;
+}
+#todayBook > div > div {
+	float: right;
+	width: 380px;
+}
+#todayBook div div:after {
+	clear: both;
+	display: block;
+	content: "";
+}
+#todayBook div div span {
+	float: left;
+	display: block;
+	border: 1px solid #dd68de;
+	border-radius: 50px;
+	padding: 3px 10px;
+	color: #dd68de;
+}
+#todayBook h3 {
+	float: left;
+	display: block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
+	width: 320px;
+	margin-left: 5px;
+	font-size: 20px;
+	overflow: hidden;
+}
+#todayBook .author {
+	float: left;
+	margin-top: 5px;
+	color: #746e6a;
+	font-size: 13px;
+}
+#todayBook .price {
+	float: right;
+	margin-top: 3px;
+	font-size: 15px;
+}
+#todayBook .sub {
+	padding: 15px 0;
+	margin-top: 15px;
+	border-top: 1px solid #f0f0f0;
+	color: #ff5c3c;
+}
+#banner {
+	position: relative;
+	float: right;
+	margin: 30px 0 10px;
+}
+#banner > div {
+	width: 400px;
+	height: 340px;
+	margin-top: 5px;
+	background: #fff;
+	border: 1px solid #ddd;
+}
+#banner .haeruPrev, 
+#banner .haeruNext {
+	position: absolute;
+	top: 35%;
+	width: 40px;
+	height: 50px;
+	text-indent: -999em;
+	font-size: 1px;
+}
+
+#bestsel h2 {
+	width: 1100px;
+	margin: 5px auto;
+}
+#bestsel > div {
+	width: 1100px;
+	height: 280px;
+	margin: 0 auto;
+	background: #fff;
+	border: 1px solid #ddd;
+}
+#bestsel ol {
+	display: none;
+	margin: 10px 0 0 10px;
+}
+#bestsel .all {display: block;}
+#bestsel ol li {
+	position: relative;
+	float: left;
+	margin: 18px;
+	text-align: center;
+}
+#bestsel ol li span:first-child {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	background: #999;
+	color: #fff;
+	font-weight: bold;
+}
+#bestsel ol li:first-child span:first-child {
+	background: #76c900;
+}
+#bestsel span.img {
+	display: block;
+	overflow: hidden;
+	width: 90px;
+	height: 130px;
+}
+#bestsel img {width: 100%;}
+#bestsel strong {
+	display: block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
+	width: 100px;
+	overflow: hidden;
+}
+
+.tabMenu {
+	border-bottom: 1px solid #f0f0f0;
+}
+#other ol:after,
+#bestsel ol:after,
+.tabMenu:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+.tabMenu li {
+	display: inline
+}
+.tabMenu a {
+	display: inline-block;
+	padding: 13px 13px 10px;
+}
+.tabMenu a:hover {
+	text-decoration: none;
+	border-bottom: 3px solid #aaa;
+}
+.tabMenu .on a {
+	border-bottom: 3px solid #ff5c3c;
+	color: #ff5c3c;
+	font-weight: bold;
+}
+
+#other {
+	margin-top: 50px;
+	padding: 20px;
+	background: #8d8479;
+}
+#other .tabMenu2 {text-align: center;}
+#other .tabMenu2 li {
+	display: inline
+}
+#other .tabMenu2 a {
+	display: inline-block;
+	padding: 5px 10px;
+}
+#other .tabMenu2 a:hover {
+	text-decoration: none;
+	font-weight: bold;
+}
+#other .tabMenu2 .on a {
+	background: #61574a;
+	color: #fff;
+	font-weight: bold;
+}
+#other span.img {
+	display: inline-block;
+	overflow: hidden;
+	width: 90px;
+	height: 130px;
+	border: 13px solid #f0f0f0;
+}
+#other img {width: 100%;}
+#other strong {
+	display: block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
+	width: 150px;
+	overflow: hidden;
+}
+#other ol {
+	display: none;
+	width: 1100px;
+	margin: 10px auto 0;
+	padding-left: 5px;
+	color: #fff;
+}
+#other ol.otherlist1 {display: block;}
+#other ol li {
+	position: relative;
+	float: left;
+	width: 150px;
+	margin: 16px;
+	text-align: center;
+}
+#other .price {font-size: 13px;}
+#other .point {
+	display: inline-block;
+	background: url("../img/point.png") 0 center no-repeat;
+	padding-left: 20px;
+	font-size: 12px;
+}
+.contArea {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+
+
+
+
